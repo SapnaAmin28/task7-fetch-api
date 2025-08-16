@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Task 7 • Fetch API – Users</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="container">
+    <h1>Users (Fetch API)</h1>
+    <p class="sub">Pulled from <code>https://jsonplaceholder.typicode.com/users</code> using <em>async/await</em>.</p>
+    <div class="controls">
+      <button id="loadBtn" class="btn">Load Users</button>
+      <button id="reloadBtn" class="btn">Reload</button>
+      <button id="clearBtn" class="btn btn-ghost">Clear</button>
+      <button id="simulateErrorBtn" class="btn btn-danger">Simulate Error</button>
+    </div>
+    <div id="status" class="status" role="status" aria-live="polite"></div>
+  </header>
+
+  <main class="container">
+    <div id="users" class="grid"></div>
+    <div id="loading" class="loading hidden" aria-hidden="true">
+      <div class="spinner" aria-label="Loading"></div>
+      <span>Loading…</span>
+    </div>
+    <div id="error" class="error hidden" role="alert"></div>
+  </main>
+
+  <footer class="container foot">
+    <small>Starter by ChatGPT • Task 7 – Fetch &amp; Display Data</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

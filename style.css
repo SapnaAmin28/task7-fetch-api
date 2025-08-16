@@ -1,0 +1,81 @@
+
+:root{
+    --bg: #0b1020;
+    --panel: #121a2a;
+    --muted: #91a0b3;
+    --text: #e7eef7;
+    --accent: #3aa1ff;
+    --danger: #ff5964;
+    --ring: rgba(58,161,255,.35);
+  }
+  
+  *{box-sizing:border-box}
+  
+  html,body{height:100%}
+  body{
+    margin:0;
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Noto Sans, Apple Color Emoji, Segoe UI Emoji;
+    background: radial-gradient(1200px 600px at 80% -10%, rgba(58,161,255,.1), transparent 60%) no-repeat, var(--bg);
+    color: var(--text);
+  }
+  
+  .container{
+    width:min(100%, 980px);
+    margin-inline:auto;
+    padding: 24px 16px;
+  }
+  
+  h1{ margin: 0 0 4px }
+  .sub{ margin: 0 0 16px; color: var(--muted) }
+  
+  .controls{ display:flex; gap:10px; flex-wrap:wrap; margin: 12px 0 4px }
+  .btn{
+    padding:10px 14px; border:1px solid transparent; border-radius:12px;
+    background:#1a2640; color:var(--text); cursor:pointer; font-weight:600;
+    transition: transform .05s ease, box-shadow .15s ease, border-color .2s ease;
+  }
+  .btn:hover{ transform: translateY(-1px); box-shadow: 0 8px 24px rgba(0,0,0,.35) }
+  .btn:focus{ outline:none; box-shadow: 0 0 0 4px var(--ring) }
+  .btn-ghost{ background:transparent; border-color:#33415e }
+  .btn-danger{ background: #3b1720; border-color: #4e1c26; color:#ffd7db }
+  .status{ color:var(--muted); margin-top:8px }
+  
+  .grid{
+    display:grid; gap:14px;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    margin-top: 8px;
+  }
+  
+  .card{
+    background: linear-gradient(180deg, #121a2a, #0f1726);
+    border: 1px solid #1f2a44;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.03);
+  }
+  .card h3{ margin:0 0 8px; font-size:18px }
+  .card p{ margin:6px 0; color:#c7d2e0 }
+  .card a{ color: var(--accent); text-decoration:none }
+  .card a:hover{ text-decoration:underline }
+  
+  .loading{
+    display:flex; align-items:center; gap:10px; justify-content:center;
+    padding:14px; margin-top:12px; background:#101726; border:1px dashed #263656;
+    border-radius: 12px; color:#a8b3c7;
+  }
+  .spinner{
+    width:18px; height:18px; border-radius:50%;
+    border: 3px solid #243554; border-top-color: var(--accent);
+    animation: spin 1s linear infinite;
+  }
+  @keyframes spin{ to{ transform: rotate(360deg) } }
+  
+  .error{
+    margin-top:12px; padding:12px; border-radius:12px;
+    background:#2a1619; border:1px solid #4a1e24; color:#ffd7db;
+  }
+  
+  .hidden{ display:none }
+  
+  .foot{ color:#7f8aa3; opacity:.8 }
+  
